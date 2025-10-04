@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Alice Smith",
+    "password": "alice123",
+    "hashPasswordString": "5f4dcc3b5aa765d61d8327deb882cf99",
+    "ticketsBooked": [
+      {
+        "ticketId": "TICKET001",
+        "userId": "USER001",
+        "source": "New York",
+        "destination": "Boston",
+        "Train": {
+          "trainId": "TRAIN001",
+          "trainNumber": "NYB123",
+          "seats": [
+            [1, 0, 1, 1],
+            [0, 1, 1, 0]
+          ],
+          "stationTimes": {
+            "New York": "08:00:00",
+            "Boston": "12:00:00"
+          },
+          "stations": ["New York", "Hartford", "Boston"]
+        },
+        "dateOfTravel": "2024-07-01T08:00:00Z"
+      }
+    ],
+    "userId": "USER001"
+  },
+  {
+    "name": "Bob Johnson",
+    "password": "bob456",
+    "hashPasswordString": "e99a18c428cb38d5f260853678922e03",
+    "ticketsBooked": [
+      {
+        "ticketId": "TICKET002",
+        "userId": "USER002",
+        "source": "Chicago",
+        "destination": "Detroit",
+        "Train": {
+          "trainId": "TRAIN002",
+          "trainNumber": "CHD456",
+          "seats": [
+            [1, 1, 0, 1],
+            [1, 0, 0, 1]
+          ],
+          "stationTimes": {
+            "Chicago": "09:30:00",
+            "Detroit": "13:45:00"
+          },
+          "stations": ["Chicago", "Kalamazoo", "Detroit"]
+        },
+        "dateOfTravel": "2024-07-02T09:30:00Z"
+      }
+    ],
+    "userId": "USER002"
+  }
+]
