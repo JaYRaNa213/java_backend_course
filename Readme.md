@@ -3,6 +3,99 @@
 This repository contains Java backend projects. This README provides guidance on how to start Java backend development, the technologies used, recommended tools, project structure, and best practices.
 
 ---
+```
+ecommerce-app/
+│── pom.xml                          // Maven dependencies + build configuration
+│── README.md                        // Project overview and setup instructions
+│
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── com/example/ecommerce/
+    │   │       ├── EcommerceApplication.java  // Spring Boot entry point
+    │   │       │
+    │   │       ├── config/                    // All app-wide configuration classes
+    │   │       │   ├── SecurityConfig.java    // Spring Security config
+    │   │       │   ├── SwaggerConfig.java     // API documentation
+    │   │       │   ├── CorsConfig.java        // CORS settings
+    │   │       │   └── AppConfig.java         // Beans, model mappers, etc.
+    │   │       │
+    │   │       ├── controller/                // REST API endpoints layer
+    │   │       │   ├── ProductController.java
+    │   │       │   ├── CartController.java
+    │   │       │   ├── OrderController.java
+    │   │       │   ├── AuthController.java
+    │   │       │   └── UserController.java
+    │   │       │
+    │   │       ├── service/                    // Business logic layer
+    │   │       │   ├── interfaces/             // Interfaces for loose coupling
+    │   │       │   │   ├── ProductService.java
+    │   │       │   │   ├── OrderService.java
+    │   │       │   │   ├── UserService.java
+    │   │       │   │   └── AuthService.java
+    │   │       │   └── impl/                    // Implementations of services
+    │   │       │       ├── ProductServiceImpl.java
+    │   │       │       ├── OrderServiceImpl.java
+    │   │       │       └── UserServiceImpl.java
+    │   │       │
+    │   │       ├── repository/                 // Data access layer (JPA repositories)
+    │   │       │   ├── ProductRepository.java
+    │   │       │   ├── UserRepository.java
+    │   │       │   ├── OrderRepository.java
+    │   │       │   ├── CartRepository.java
+    │   │       │   └── CategoryRepository.java
+    │   │       │
+    │   │       ├── model/                      // JPA entities representing DB tables
+    │   │       │   ├── Product.java
+    │   │       │   ├── Category.java
+    │   │       │   ├── User.java
+    │   │       │   ├── Cart.java
+    │   │       │   ├── Order.java
+    │   │       │   └── Payment.java
+    │   │       │
+    │   │       ├── dto/                        // Request + response objects
+    │   │       │   ├── ProductDTO.java
+    │   │       │   ├── CreateOrderRequest.java
+    │   │       │   ├── UserDTO.java
+    │   │       │   └── AuthRequest.java
+    │   │       │
+    │   │       ├── exception/                  // Global error handling
+    │   │       │   ├── GlobalExceptionHandler.java
+    │   │       │   ├── ResourceNotFound.java
+    │   │       │   └── InvalidRequestException.java
+    │   │       │
+    │   │       ├── util/                       // Utilities (helpers)
+    │   │       │   ├── JwtUtil.java
+    │   │       │   ├── EmailUtil.java
+    │   │       │   └── PaginationUtil.java
+    │   │       │
+    │   │       ├── mapper/                     // DTO ↔ Entity converters
+    │   │       │   ├── ProductMapper.java
+    │   │       │   └── UserMapper.java
+    │   │       │
+    │   │       └── enums/                      // Enum constants (status, type, etc.)
+    │   │           ├── OrderStatus.java
+    │   │           └── PaymentStatus.java
+    │   │
+    │   ├── resources/
+    │   │   ├── application.properties          // DB, JWT, mail configs
+    │   │   ├── static/                         // Static files (if needed)
+    │   │   │    └── images/                    // Product images (optional)
+    │   │   ├── templates/                      // Thymeleaf (if using SSR)
+    │   │   └── messages.properties             // For i18n / error messages
+    │   │
+    │   └── webapp/                             // Only if using JSP/SSR
+    │       └── WEB-INF/
+    │
+    └── test/
+        └── java/
+            └── com/example/ecommerce/
+                ├── controller/
+                ├── service/
+                └── repository/
+```
+
+
 
 ## Table of Contents
 
